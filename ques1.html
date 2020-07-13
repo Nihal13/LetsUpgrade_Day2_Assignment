@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+
+<body>
+    <h1>Today is : <span id="day"></span> </h1>
+    <h2>Current time is : <span id="time"></span></h2>
+
+    
+    <script>
+        const today = new Date();
+        console.log(today);
+
+        const day = document.querySelector("#day");
+        const time = document.querySelector("#time");
+
+        const getDay = () => {
+            if (today.getDay() == 1) {
+                return "Monday";
+            } else if (today.getDay() == 2) {
+                return "Tuesday";
+            } else if (today.getDay() == 3) {
+                return "Wednesday";
+            } else if (today.getDay() == 4) {
+                return "Thursday";
+            } else if (today.getDay() == 5) {
+                return "Friday";
+            } else if (today.getDay() == 6) {
+                return "Saturday";
+            } else {
+                return "Sunday";
+            }
+        }
+
+        day.innerHTML = getDay();
+
+        const getHours = () => {
+            if (today.getHours > 12) {
+                return today.getHours() - 12 + " PM";
+            } else {
+                return today.getHours() + " AM";
+            }
+        }
+
+        time.innerHTML = getHours() + " : " + today.getMinutes() + " : " + today.getSeconds();
+    </script>
+</body>
+
+</html>

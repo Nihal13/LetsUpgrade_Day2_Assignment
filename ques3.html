@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2| Ques 3 </title>
+</head>
+<body>
+    <h1>Current date is : <span id ="date"></span></h1>
+
+    <script>
+        const today =new Date();
+        console.log(today);
+        const date = document.querySelector("#date");
+        date.innerHTML=today.getDate()+" - "+ today.getMonth() +" - "+ today.getFullYear(); 
+    </script>
+</body>
+</html>
